@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($a = Get-Content \"c:\\\\Users\\\\GiovannaFerreiraCamp\\\\Desktop\\\\tcc_notewave2\\\\frontend\\\\css\\\\style.css\" | Where-Object { $_.Trim\\(\\) -ne '' }; $b = Get-Content \"c:\\\\Users\\\\GiovannaFerreiraCamp\\\\Desktop\\\\tcc_notewave2\\\\frontend\\\\css\\\\style-sol.css\" | Where-Object { $_.Trim\\(\\) -ne '' }; Write-Output \"style.css linhas: $\\($a.Count\\)  style-sol.css linhas: $\\($b.Count\\)\"; $d = Compare-Object $a $b; Write-Output \"Linhas diferentes: $\\($d.Count\\)\"; $d | Select-Object -First 40 | Format-Table -AutoSize | Out-String -Width 160)",
+      "PowerShell($a = Get-Content \"c:\\\\Users\\\\GiovannaFerreiraCamp\\\\Desktop\\\\tcc_notewave2\\\\frontend\\\\css\\\\style-texto.css\" | Where-Object { $_.Trim\\(\\) -ne '' }; $b = Get-Content \"c:\\\\Users\\\\GiovannaFerreiraCamp\\\\Desktop\\\\tcc_notewave2\\\\frontend\\\\css\\\\style.css\" | Where-Object { $_.Trim\\(\\) -ne '' }; Write-Output \"texto: $\\($a.Count\\) linhas\"; $common = \\(Compare-Object $a $b -IncludeEqual -ExcludeDifferent\\).Count; Write-Output \"Linhas em comum com style.css: $common\")"
+    ]
+  }
+}
